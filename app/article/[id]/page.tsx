@@ -76,19 +76,7 @@ export default function ArticlePage() {
             href={`/profile/${article.author?.username || "unknown"}`}
             className="flex items-center gap-3 hover:opacity-80"
           >
-            {article.author?.avatar_url ? (
-              <img
-                src={article.author.avatar_url || "/placeholder.svg"}
-                alt={article.author || "User"}
-                className="h-12 w-12 rounded-full object-cover"
-              />
-            ) : (
-              <div className="h-12 w-12 rounded-full bg-primary flex items-center justify-center">
-                <span className="text-lg font-medium text-primary-foreground">
-                  {article.author?.username?.[0]?.toUpperCase() || "U"}
-                </span>
-              </div>
-            )}
+            
             <div>
               <p className="font-medium">{  article.author || "Unknown User"}</p>
               <p className="text-sm text-muted-foreground">@{article.author || "unknown"}</p>

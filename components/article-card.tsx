@@ -25,17 +25,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
           <div className="space-y-3">
             {/* Author info */}
             <div className="flex items-center gap-3">
-              {article.author?.avatar_url ? (
-                <img
-                  src={article.author.avatar_url || "/placeholder.svg"}
-                  alt={authorName}
-                  className="h-8 w-8 rounded-full object-cover"
-                />
-              ) : (
-                <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center">
-                  <span className="text-sm font-medium text-primary-foreground">{authorInitial}</span>
-                </div>
-              )}
+              
               <div className="flex flex-col">
                 <span className="text-sm font-medium">{authorName}</span>
                 <span className="text-xs text-muted-foreground">{formattedDate}</span>

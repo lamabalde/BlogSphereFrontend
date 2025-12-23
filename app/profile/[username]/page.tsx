@@ -70,17 +70,7 @@ export default function ProfilePage() {
       <div className="border-b border-border bg-gradient-to-b from-pastel-blue/20 to-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-            {user.avatar_url ? (
-              <img
-                src={user.avatar_url || "/placeholder.svg"}
-                alt={user.username}
-                className="h-24 w-24 rounded-full object-cover"
-              />
-            ) : (
-              <div className="h-24 w-24 rounded-full bg-primary flex items-center justify-center">
-                <span className="text-4xl font-medium text-primary-foreground">{user.username[0].toUpperCase()}</span>
-              </div>
-            )}
+            
 
             <div className="flex-1">
               <h1 className="text-3xl font-serif font-bold mb-2">{user.full_name || user.username}</h1>
